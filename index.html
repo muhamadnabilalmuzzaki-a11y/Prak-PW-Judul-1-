@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +9,7 @@
 <body>
 
     <header>
-        <h1>Sistem Informasi Data Mahasiswa</h1>
+        <h1>Sistem Informasi Data Mahasiswa - Praktikum 1 - Kelas B</h1>
 
         <p>
             Sistem informasi untuk mengelola data mahasiswa.
@@ -67,17 +66,6 @@
 
         </section>
 
-        <hr>
-
-        <section id="daftar-mahasiswa">
-
-            <h2>Daftar Mahasiswa Aktif</h2>
-
-            <p>
-                Berikut merupakan daftar mahasiswa aktif
-                pada Sistem Informasi Data Mahasiswa.
-            </p>
-
             <table border="1" cellpadding="8" cellspacing="0">
 
                 <thead>
@@ -106,28 +94,102 @@
                         <td>Detail</td>
                     </tr>
 
-                    <tr>
-                        <td>2415061108</td>
-                        <td>Fathan Salaka R</td>
-                        <td>Teknik Informatika</td>
-                        <td>2024</td>
-                        <td>fathansalakar@gmail.com</td>
-                        <td>Aktif</td>
-                        <td>Detail</td>
-                    </tr>
-
-                    <tr>
-                        <td>2415061121</td>
-                        <td>Deta Amelia</td>
-                        <td>Teknik Informatika</td>
-                        <td>2024</td>
-                        <td>detaamelia@gmail.com</td>
-                        <td>Aktif</td>
-                        <td>Detail</td>
-                    </tr>
-
                 </tbody>
+<hr>
 
+<section id="form-tambah">
+    <h2>Tambah Mahasiswa Baru</h2>
+    <p>Silakan isi formulir berikut untuk menambahkan data mahasiswa baru.</p>
+
+    <form action="#" method="POST">
+        <fieldset>
+            <legend>Data Mahasiswa</legend>
+
+            <!-- Field 1: NPM -->
+            <div>
+                <label for="npm">Nomor Pokok Mahasiswa (NPM):</label><br>
+                <input
+                    type="text"
+                    id="npm"
+                    name="npm"
+                    placeholder=" "
+                    required
+                    pattern="[0-9]{8,12}"
+                    title="NPM harus berupa angka 8-12 digit"
+                ><br>
+                <small>Masukkan NPM berupa angka 8-12 digit.</small>
+            </div>
+
+            <div>
+                <label for="nama">Nama Lengkap:</label><br>
+                <input
+                    type="text"
+                    id="nama"
+                    name="nama"
+                    placeholder=" "
+                    required
+                    minlength="3"
+                    maxlength="100"
+                ><br>
+                <small>
+            </div>
+
+            <div>
+                <label for="program_studi">Program Studi:</label><br>
+                <select
+                    id="program_studi"
+                    name="program_studi"
+                    required
+                >
+                    <option value="">-- Pilih Program Studi --</option>
+                    <option value="informatika">Teknik Informatika</option>
+                    <option value="elektro">Teknik Elektro</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="Angkatan">Angkatan:</label><br>
+                <select
+                    name="Angkatan"
+                    required
+                >
+                    <option value="">-- Pilih Angkatan --</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                </select>
+            </div>
+
+            <div>
+    <label for="email">Alamat Email:</label><br>
+    <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder=" "
+        required
+    ><br>
+    <small>Masukkan alamat email yang valid.</small>
+</div>
+
+        </fieldset>
+    </form>
+</section>
+
+<section id="daftar-mahasiswa">
+
+            <h2>Daftar Mahasiswa Aktif</h2>
+
+            <p>
+                Berikut merupakan daftar mahasiswa aktif
+                pada Sistem Informasi Data Mahasiswa.
+            </p>
             </table>
 
         </section>
