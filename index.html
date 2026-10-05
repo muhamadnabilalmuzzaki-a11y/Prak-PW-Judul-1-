@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistem Informasi Data Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="top">
 
     <header>
         <h1>Sistem Informasi Data Mahasiswa - Praktikum 1 - Kelas B</h1>
 
         <p>
-            Sistem informasi untuk mengelola data mahasiswa.
+            Sistem informasi untuk mengelola dan menampilkan data mahasiswa
+            secara terstruktur.
         </p>
 
-        <img 
-            src="Logo.png" 
+        <img
+            src="Foto.jpeg"
             alt="Logo Sistem Informasi Data Mahasiswa"
-            width="85"
+            width="80"
+            height="100"
         >
     </header>
 
-    <hr> 
+    <hr>
 
     <nav>
         <ul>
             <li>
                 <a href="#informasi">Informasi Sistem</a>
             </li>
-
             <li>
                 <a href="#daftar-mahasiswa">Daftar Mahasiswa</a>
             </li>
-
             <li>
-                <a href="#form-tambah">Tambah Mahasiswa</a>
+                <a href="#form-tambah">Tambah Mahasiswa Baru</a>
             </li>
         </ul>
     </nav>
@@ -44,13 +46,14 @@
 
     <main>
 
+        <!-- INFORMASI SISTEM -->
         <section id="informasi">
 
             <h2>Informasi Sistem</h2>
 
             <p>
-                Sistem Informasi Data Mahasiswa digunakan untuk
-                mengelola dan menampilkan informasi data mahasiswa.
+                Sistem Informasi Data Mahasiswa digunakan untuk mengelola
+                dan menampilkan informasi data mahasiswa secara terstruktur.
             </p>
 
             <article>
@@ -58,143 +61,314 @@
                 <h3>Tujuan Sistem</h3>
 
                 <p>
-                    Sistem ini dibuat untuk membantu pengelolaan
-                    data mahasiswa secara terstruktur.
+                    Sistem ini dibuat untuk membantu pengelolaan data mahasiswa
+                    agar informasi mahasiswa dapat disimpan dan ditampilkan
+                    dengan lebih terorganisir.
                 </p>
 
             </article>
 
         </section>
 
-            <table border="1" cellpadding="8" cellspacing="0">
+        <hr>
 
-                <thead>
-
-                    <tr>
-                        <th>NPM</th>
-                        <th>Nama Lengkap</th>
-                        <th>Program Studi</th>
-                        <th>Angkatan</th>
-                        <th>Email</th>
-                        <th>Status</th>
-                        <th>Aksi</th>
-                    </tr>
-
-                </thead>
-
-                <tbody>
-
-                    <tr>
-                        <td>2415061121</td>
-                        <td>Muhamad Nabil Almuzzaki</td>
-                        <td>Teknik Informatika</td>
-                        <td>2024</td>
-                        <td>muhamadnabilalmuzzaki@gmail.com</td>
-                        <td>Aktif</td>
-                        <td>Detail</td>
-                    </tr>
-
-                </tbody>
-<hr>
-
-<section id="form-tambah">
-    <h2>Tambah Mahasiswa Baru</h2>
-    <p>Silakan isi formulir berikut untuk menambahkan data mahasiswa baru.</p>
-
-    <form action="#" method="POST">
-        <fieldset>
-            <legend>Data Mahasiswa</legend>
-
-            <!-- Field 1: NPM -->
-            <div>
-                <label for="npm">Nomor Pokok Mahasiswa (NPM):</label><br>
-                <input
-                    type="text"
-                    id="npm"
-                    name="npm"
-                    placeholder=" "
-                    required
-                    pattern="[0-9]{8,12}"
-                    title="NPM harus berupa angka 8-12 digit"
-                ><br>
-                <small>Masukkan NPM berupa angka 8-12 digit.</small>
-            </div>
-
-            <div>
-                <label for="nama">Nama Lengkap:</label><br>
-                <input
-                    type="text"
-                    id="nama"
-                    name="nama"
-                    placeholder=" "
-                    required
-                    minlength="3"
-                    maxlength="100"
-                ><br>
-                <small>
-            </div>
-
-            <div>
-                <label for="program_studi">Program Studi:</label><br>
-                <select
-                    id="program_studi"
-                    name="program_studi"
-                    required
-                >
-                    <option value="">-- Pilih Program Studi --</option>
-                    <option value="informatika">Teknik Informatika</option>
-                    <option value="elektro">Teknik Elektro</option>
-                </select>
-            </div>
-
-            <div>
-                <label for="Angkatan">Angkatan:</label><br>
-                <select
-                    name="Angkatan"
-                    required
-                >
-                    <option value="">-- Pilih Angkatan --</option>
-                    <option value="2018">2018</option>
-                    <option value="2019">2019</option>
-                    <option value="2020">2020</option>
-                    <option value="2021">2021</option>
-                    <option value="2022">2022</option>
-                    <option value="2023">2023</option>
-                    <option value="2024">2024</option>
-                    <option value="2025">2025</option>
-                    <option value="2026">2026</option>
-                </select>
-            </div>
-
-            <div>
-    <label for="email">Alamat Email:</label><br>
-    <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder=" "
-        required
-    ><br>
-    <small>Masukkan alamat email yang valid.</small>
-</div>
-
-        </fieldset>
-    </form>
-</section>
-
-<section id="daftar-mahasiswa">
+        <!-- DAFTAR MAHASISWA -->
+        <section id="daftar-mahasiswa">
 
             <h2>Daftar Mahasiswa Aktif</h2>
 
             <p>
-                Berikut merupakan daftar mahasiswa aktif
-                pada Sistem Informasi Data Mahasiswa.
+                Berikut merupakan daftar mahasiswa aktif pada
+                Sistem Informasi Data Mahasiswa.
             </p>
-            </table>
+
+            <div class="table-responsive">
+
+                <table border="1" cellpadding="8" cellspacing="0">
+
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Foto</th>
+                            <th>NPM</th>
+                            <th>Nama Lengkap</th>
+                            <th>Program Studi</th>
+                            <th>Angkatan</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>1</td>
+
+                            <td>
+                                <img
+                                    src="Foto.jpeg"
+                                    alt="Foto Muhamad Nabil Almuzzaki"
+                                >
+                            </td>
+
+                            <td>2415061121</td>
+
+                            <td>Muhamad Nabil Almuzzaki</td>
+
+                            <td>Teknik Informatika</td>
+
+                            <td>2024</td>
+
+                            <td>muhamadnabilalmuzzaki@gmail.com</td>
+
+                            <td>Aktif</td>
+
+                            <td>Detail</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+
+                            <td>
+                                <img
+                                    src="Foto.jpeg"
+                                    alt="Foto Deta Amelia"
+                                >
+                            </td>
+
+                            <td>2415061122</td>
+
+                            <td>Deta Amelia</td>
+
+                            <td>Teknik Informatika</td>
+
+                            <td>2024</td>
+
+                            <td>detaamelia@gmail.com</td>
+
+                            <td>Aktif</td>
+
+                            <td>Detail</td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+
+                            <td>
+                                <img
+                                    src="Foto.jpeg"
+                                    alt="Foto Fathan Salaka"
+                                >
+                            </td>
+
+                            <td>2415061123</td>
+
+                            <td>Fathan Salaka</td>
+
+                            <td>Teknik Informatika</td>
+
+                            <td>2024</td>
+
+                            <td>fathansalaka@gmail.com</td>
+
+                            <td>Aktif</td>
+
+                            <td>Detail</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <hr>
+
+        <!-- FORM TAMBAH MAHASISWA -->
+        <section id="form-tambah">
+
+            <h2>Tambah Mahasiswa Baru</h2>
+
+            <p>
+                Silakan isi formulir berikut untuk menambahkan
+                data mahasiswa baru.
+            </p>
+
+            <form action="#" method="POST">
+
+                <fieldset>
+
+                    <legend>Data Mahasiswa</legend>
+
+                    <p>
+                        <label for="npm">
+                            Nomor Pokok Mahasiswa (NPM):
+                        </label>
+
+                        <br>
+
+                        <input
+                            type="text"
+                            id="npm"
+                            name="npm"
+                            placeholder=" "
+                            required
+                            pattern="[0-9]{8,12}"
+                            title="NPM harus berupa angka 8-12 digit"
+                        >
+
+                        <br>
+
+                        <small></small>
+                    </p>
+
+                    <p>
+                        <label for="nama">
+                            Nama Lengkap:
+                        </label>
+
+                        <br>
+
+                        <input
+                            type="text"
+                            id="nama"
+                            name="nama"
+                            placeholder=" "
+                            required
+                            minlength="3"
+                            maxlength="100"
+                        >
+
+                        <br>
+
+                        <small></small>
+                    </p>
+
+                    <p>
+                        <label for="program_studi">
+                            Program Studi:
+                        </label>
+
+                        <br>
+
+                        <select
+                            id="program_studi"
+                            name="program_studi"
+                            required
+                        >
+
+                            <option value=""></option>
+
+                            <option value="Teknik Informatika">
+                                Teknik Informatika
+                            </option>
+
+                            <option value="Teknik Elektro">
+                                Teknik Elektro
+                            </option>
+
+                        </select>
+
+                        <br>
+
+                        <small>
+                            Pilih program studi mahasiswa.
+                        </small>
+                    </p>
+
+                    <p>
+                        <label for="angkatan">
+                            Tahun Angkatan:
+                        </label>
+
+                        <br>
+
+                        <input
+                            type="number"
+                            id="angkatan"
+                            name="angkatan"
+                            placeholder=" "
+                            required
+                            min="2018"
+                            max="2026"
+                        >
+
+                        <br>
+
+                        <small></small>
+                    </p>
+
+                    <p>
+                        <label for="email">
+                            Alamat Email:
+                        </label>
+
+                        <br>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder=" "
+                            required
+                        >
+
+                        <br>
+
+                        <small>
+                            Masukkan alamat email yang valid.
+                        </small>
+                    </p>
+
+                    <p>
+
+                        <button type="submit">
+                            Simpan Data Mahasiswa
+                        </button>
+
+                        <button type="reset">
+                            Reset Formulir
+                        </button>
+
+                    </p>
+
+                </fieldset>
+
+            </form>
 
         </section>
 
     </main>
 
+    <hr>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            &copy; 2026 Sistem Informasi Data Mahasiswa.
+            Seluruh hak cipta dilindungi.
+        </p>
+
+        <p>
+            Kontak pengembang:
+
+            <a href="mailto:muhamadnabilalmuzzaki@gmail.com">
+                muhamadnabilalmuzzaki@gmail.com
+            </a>
+        </p>
+
+        <p>
+            <a href="#top">
+                &uarr; Kembali ke atas
+            </a>
+        </p>
+
+    </footer>
+
 </body>
+
 </html>
